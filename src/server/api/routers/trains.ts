@@ -35,6 +35,8 @@ export const trainsRouter = createTRPCRouter({
         speed: thisTrain.snelheid,
         direction: thisTrain.richting,
         track: info?.spoor,
+
+        image: `https://trein.wissehes.nl/api/image/${info?.materieeldelen[0]?.type}`,
       };
 
       return data;

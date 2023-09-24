@@ -11,6 +11,8 @@ export const liveTrainSchema = z.object({
   speed: z.number().describe("Speed in km/h"),
   direction: z.number().describe("Direction as degrees from north"),
   track: z.string().optional(),
+
+  image: z.string().optional(),
 });
 
 export type LiveTrain = z.infer<typeof liveTrainSchema>;
