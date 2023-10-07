@@ -52,6 +52,6 @@ export interface Afbeelding {
 export interface PerronVoorzieningen {
   paddingLeft: number;
   width: number;
-  type: string;
+  type: "LIFT" | "PERRONLETTER" | "ROLTRAP" | "TRAP" | "unknown";
   description: string;
 }
