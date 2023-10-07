@@ -21,6 +21,9 @@ export const liveTrainSchema = z.object({
   station: z.string().optional(),
   track: z.string().optional(),
   platformFacilities: z.array(platformFacilitySchema).optional(),
+  images: z
+    .array(z.object({ url: z.string(), width: z.number(), height: z.number() }))
+    .optional(),
 
   image: z.string().optional(),
 });

@@ -46,6 +46,11 @@ export const trainsRouter = createTRPCRouter({
         station: info?.station,
         track: info?.spoor,
         platformFacilities: info?.perronVoorzieningen,
+        images: info?.materieeldelen.map((m) => ({
+          url: m.afbeelding,
+          width: m.breedte,
+          height: m.hoogte,
+        })),
 
         image: createImageURL(info),
       };
@@ -81,6 +86,11 @@ export const trainsRouter = createTRPCRouter({
           station: info?.station,
           track: info?.spoor,
           platformFacilities: info?.perronVoorzieningen,
+          images: info?.materieeldelen.map((m) => ({
+            url: m.afbeelding,
+            width: m.breedte,
+            height: m.hoogte,
+          })),
 
           image: createImageURL(info),
         };
