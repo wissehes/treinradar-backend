@@ -43,6 +43,9 @@ export const trainsRouter = createTRPCRouter({
         speed: thisTrain.snelheid,
         direction: thisTrain.richting,
 
+        type: thisTrain.type,
+        journeyId: thisTrain.ritId,
+
         station: info?.station,
         track: info?.spoor,
         platformFacilities: info?.perronVoorzieningen,
@@ -82,6 +85,9 @@ export const trainsRouter = createTRPCRouter({
 
           speed: train.snelheid,
           direction: train.richting,
+
+          type: train.type,
+          journeyId: train.ritId,
 
           station: info?.station,
           track: info?.spoor,

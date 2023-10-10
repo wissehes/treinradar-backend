@@ -16,7 +16,7 @@ export interface Train {
   snelheid: number;
   richting: number;
   horizontaleNauwkeurigheid: number;
-  type: string;
+  type: "SPR" | "IC" | "ARR";
   bron: string;
   materieel?: number[];
 }

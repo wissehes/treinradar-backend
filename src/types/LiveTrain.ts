@@ -18,6 +18,9 @@ export const liveTrainSchema = z.object({
   speed: z.number().describe("Speed in km/h"),
   direction: z.number().describe("Direction as degrees from north"),
 
+  type: z.enum(["SPR", "IC", "ARR"]),
+  journeyId: z.string(),
+
   station: z.string().optional(),
   track: z.string().optional(),
   platformFacilities: z.array(platformFacilitySchema).optional(),
